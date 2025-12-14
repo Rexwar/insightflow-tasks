@@ -31,9 +31,9 @@ jobs:
         with:
           context: "{{defaultContext}}"
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/insightflow-tasks:latest, ${{ secrets.DOCKER_USERNAME }}/insightflow-tasks:latest${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/insightflow-tasks:latest, ${{ secrets.DOCKER_USERNAME }}/insightflow-tasks:${{ github.sha }}
 
       # 5. Desplegar en Render
-      - name: Deploy to Render
-        run: |
-          curl -X POST \`${{ secrets.RENDER_DEPLOY_HOOK }}\`
+     # - name: Deploy to Render
+     #   run: |
+     #     curl -X POST \`${{ secrets.RENDER_DEPLOY_HOOK }}\`
