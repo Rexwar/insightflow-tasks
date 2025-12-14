@@ -7,8 +7,10 @@ WORKDIR /app
 # Copiar archivos de dependencias
 COPY package*.json ./
 
-# Instalar dependencias
-RUN npm ci --only=production
+# Limpiar cache de npm e instalar dependencias
+RUN npm cache clean --force && \
+    rm -rf node_modules && \
+    npm ci --only=production
 
 # Copiar código fuente
 COPY . .

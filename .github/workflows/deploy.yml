@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE: tu-usuario-dockerhub/insightflow-tasks
+  DOCKER_IMAGE: whitewolfcl/insightflow-tasks
 
 jobs:
   build-and-deploy:
@@ -46,4 +46,4 @@ jobs:
       # 5. Desplegar en Render
       - name: Deploy to Render
         run: |
-          curl -X POST \`${{ secrets.RENDER_DEPLOY_HOOK }}\
+          curl -X POST \`${{ secrets.RENDER_DEPLOY_HOOK }}\`
