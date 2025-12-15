@@ -47,7 +47,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: 'InsightFlow Tasks Service - API funcionando correctamente',
+    message: 'InsightFlow Tasks Service - API funcionando correctamente v2',
     version: '1.0.0',
     endpoints: {
       health: 'GET /',
